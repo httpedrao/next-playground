@@ -6,7 +6,7 @@ const CountryItem = () => {
 
   return (
     <>
-      <h2>We are in {country} !!</h2>
+      <h2>This is {country} !!</h2>
     </>
   );
 };

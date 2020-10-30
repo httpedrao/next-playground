@@ -2,12 +2,12 @@ import { useRouter } from "next/router";
 
 const CityItem = () => {
   const router = useRouter();
-  const { country, city } = router.query;
+  const { province, city } = router.query;
 
   return (
     <>
       <h2>
-        {city} is placed in {country}
+        {city} is located in {province}
       </h2>
     </>
   );

@@ -4,11 +4,14 @@ import Link from "next/link";
 const cityList = [
   {
     country: "USA",
-    city: "NewYork",
+    province: "CA",
+    city: "Los Angeles",
   },
   {
-    country: "Spain",
-    city: "Madrid",
+    country: "Brazil",
+    province: "SP",
+    city: "sao-paulo",
+    neighborhood: "Moema"
   },
   {
     country: "England",
@@ -30,9 +33,9 @@ const Index = () => (
     <ul>
       {cityList.map((item, index) => (
         <li key={index}>
-          <Link as={`/${item.country}/${item.city}`} href="/[country]/[city]">
+          <Link as={`/${item.country}/${item.province}/${item.city}/${item.neighborhood}`} href="/[country]/[province]/[city]/[neighborhood]">
             <a>
-              {item.country}-{item.city}
+              {item.country}-{item.province}-{item.city}-{item.neighborhood}
             </a>
           </Link>
         </li>
